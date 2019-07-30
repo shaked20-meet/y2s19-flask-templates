@@ -1,1 +1,24 @@
 <!-- Put the HTML template for your page here! -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1>Ice cream</h1>
+	<p>I love it because it's amazing!</p>
+	<ul>
+		{% for item in food_1 %}
+			<li> {{item}} </li>
+		{% endfor %}
+	</ul>
+	<ul>
+		{% if opposite_day == True %}
+			{% for item in food_2 %}
+				<li>{{item}}</li>
+			{% endfor %}
+		{% endif %}
+	</ul>
+</body>
+</html>
